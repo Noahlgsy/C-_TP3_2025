@@ -61,11 +61,11 @@ void Costumer::erease_product(Product& p)
 
 std::ostream& operator<<(std::ostream& os, Costumer& c)
 {
-	os << "Name : " << c.get_name() << "\n" << "Surname : " << c.get_surname() << "\n" << "Id : " << c.get_id() << "\n" << "Basket : ";
+	os << "Name : " << c.get_name() << "\n" << "Surname : " << c.get_surname() << "\n" << "Id : " << c.get_id() << "\n" << "Basket : " << "\n";
 	
-	for (const auto& product : c.get_product())
+	for (Product& cp : c.get_product())
 	{
-		os << product;
+		os << cp;
 	}
 	return os; 
 }

@@ -23,7 +23,7 @@ int main()
 	//add of the product in the basket
 	c1.add_product(GUITARE);
 	c1.add_product(SAXOPHONE);
-
+	//std::cout << c1 << std::endl;
 	//tab of the costumer
 	std::vector<Costumer> c; 
 
@@ -33,6 +33,9 @@ int main()
 	s.add_product(PS5); 
 	s.add_product(XBOX); 
 	s.add_costumer(c1); 
+	s.add_costumer(c2);
+	s.add_costumer(c3);
+	s.display_Customer_name("Noah");
 
 
 

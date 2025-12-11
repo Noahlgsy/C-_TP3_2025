@@ -45,3 +45,50 @@ void Store::add_costumer(Costumer& c)
 {
 	costumer.push_back(c); 
 }
+
+void Store::display_Customer()
+{
+	for (Costumer& cs : costumer)
+	{
+		std::cout << cs << std::endl; 
+	}
+}
+
+void Store::display_Customer_name(std::string name)
+{
+	for (Costumer& cs : costumer)
+	{
+		if (cs.get_name() == name)
+		{
+			std::cout << cs << std::endl;
+		}
+		return;
+	}
+	std::cout << "Nom non trouvé veuillez vérifier la synthaxe";
+}
+
+void Store::display_Customer_id(int id)
+{
+	{
+		for (Costumer& cs : costumer)
+		{
+			if (cs.get_id() == id)
+			{
+				std::cout << cs << std::endl;
+			}
+			return;
+		}
+		std::cout << "Nom non trouvé veuillez vérifier la synthaxe";
+	}
+}
+
+void Store::add_product_basket(Costumer& c, Product& p)
+{
+	for (Costumer& cs : costumer)
+	{
+		if (cs.get_id() == c.get_id())
+		{
+			cs.add_product(p);
+		}
+	}
+}

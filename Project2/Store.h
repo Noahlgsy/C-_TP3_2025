@@ -16,6 +16,13 @@ public:
 	void update_quantity(Product& p,  std::string name);
 	
 	void add_costumer(Costumer& c); 
+	void display_Customer(); 
+	void display_Customer_name(std::string name);
+	void display_Customer_id(int id);
+	void add_product_basket(Costumer& c, Product& p); 
+
 
 };
+
+
 
