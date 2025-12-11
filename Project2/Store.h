@@ -11,6 +11,9 @@ public:
 
 	void add_product(Product& p); 
 	void display(); 
+	void display_name(std::string name); 
+	void update_quantity(Product& p,  std::string name);
+	
 
 };
 
