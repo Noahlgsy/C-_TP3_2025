@@ -6,11 +6,34 @@ int main()
 	//Creation of products
 	Product PS5("PS5", "Une jolie console", 12, 499.99);
 	Product XBOX("XBOX", "Une puissante console", 19, 499.99);
-	std::vector<Product> p;
-	Store s(p); 
+	Product SAXOPHONE("Saxophone", "Un beau bois", 1, 499.99);
+	Product GUITARE("Guitare", "Le, meilleur instrument", 2, 200);
+	
+	std::vector<Product> sp; //stock Product of the store
+
+
+	//Customer and Basket of the productors
+	std::vector<Product> cp1; //Basket of the productors
+	Costumer c1("Noah", "Luangsay", 1, cp1);
+	std::vector<Product> cp2;
+	Costumer c2("Violette", "Rouyer", 2, cp2);
+	std::vector<Product> cp3;
+	Costumer c3("Theo", "Luangsay", 3, cp3);
+	
+	//add of the product in the basket
+	c1.add_product(GUITARE);
+	c1.add_product(SAXOPHONE);
+
+	//tab of the costumer
+	std::vector<Costumer> c; 
+
+	//Creation of the store 
+	Store s(sp, c);
+
 	s.add_product(PS5); 
 	s.add_product(XBOX); 
-	s.display_name("PS5");
+	s.add_costumer(c1); 
+
 
 
 

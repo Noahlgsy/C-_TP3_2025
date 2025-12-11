@@ -1,8 +1,9 @@
 #include "Store.h"
 
-Store::Store (std::vector<Product> _product)
-	: products(_product) 
+Store::Store (std::vector<Product> _product, std::vector<Costumer> _costumer)
+	: products(_product), costumer(_costumer)
 {
+
 }
 
 void Store::add_product(Product& p)
@@ -38,4 +39,9 @@ void Store::update_quantity(Product& p, std::string name)
 		{
 			ps.set_quantity_available(p.get_quantity_available());
 		}
+}
+
+void Store::add_costumer(Costumer& c)
+{
+	costumer.push_back(c); 
 }

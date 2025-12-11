@@ -47,6 +47,6 @@ void Product::set_price(double new_price)
 
 std::ostream& operator<<(std::ostream& os, const Product& p)
 {
-	os << "Title : " << p.title << "\n" << "Description : " << p.description << "\n" << "Quantity available : " << p.quantity_available << "\n" << "Price : " << p.price << "\n"; 
+	os << "Title : " << p.get_title() << "\n" << "Description : " << p.get_description() << "\n" << "Quantity available : " << p.get_quantity_available() << "\n" << "Price : " << p.get_price() << "\n";
 	return os; 
 }

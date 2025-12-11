@@ -24,7 +24,9 @@ public:
 	void set_quantity_available(int new_quantity_available);
 	void set_price(double new_price);
 
-	friend std::ostream& operator<<(std::ostream& os, const Product& p);
 
 };
+
+std::ostream& operator<<(std::ostream& os, const Product& p);
+
 
