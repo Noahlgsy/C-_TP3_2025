@@ -21,6 +21,7 @@ public:
 	void display_Customer_id(int id);
 	void add_product_basket(Costumer& c, Product& p); 
 	void erease_product_basket(Costumer& c, Product& p);
+	void ajust_quantity_product(Costumer& c, Product& p, int i); 
 
 
 };

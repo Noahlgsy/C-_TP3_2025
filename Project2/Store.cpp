@@ -115,3 +115,19 @@ void Store::erease_product_basket(Costumer& c, Product& p)
 		}
 	}
 }
+
+void Store::ajust_quantity_product(Costumer& c, Product& p, int i)
+{
+	for (Costumer& cs : costumer)
+	{
+		if (i < 0) i = 0;
+		for (Product& pc : cs.get_product())
+		{
+			if (pc.get_title() == p.get_title())
+			{
+				pc.set_quantity_available(i);
+				return;
+			}
+		}
+	}
+}
