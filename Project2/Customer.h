@@ -22,7 +22,7 @@ public:
 	void erease_basket();
 	void ajust_quantity_basket(Product& p, int i); 
 	void erease_product(Product& p); 
-
+	
 	
 
 };

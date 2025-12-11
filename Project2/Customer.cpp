@@ -63,9 +63,13 @@ std::ostream& operator<<(std::ostream& os, Costumer& c)
 {
 	os << "Name : " << c.get_name() << "\n" << "Surname : " << c.get_surname() << "\n" << "Id : " << c.get_id() << "\n" << "Basket : " << "\n";
 	
+	
 	for (Product& cp : c.get_product())
 	{
-		os << cp;
+		if (cp.get_quantity_available() > 0)
+		{
+			os << cp;
+		}
 	}
 	return os; 
 }

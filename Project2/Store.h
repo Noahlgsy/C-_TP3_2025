@@ -20,6 +20,7 @@ public:
 	void display_Customer_name(std::string name);
 	void display_Customer_id(int id);
 	void add_product_basket(Costumer& c, Product& p); 
+	void erease_product_basket(Costumer& c, Product& p);
 
 
 };

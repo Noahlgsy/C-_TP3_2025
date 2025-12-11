@@ -46,6 +46,18 @@ void Store::add_costumer(Costumer& c)
 	costumer.push_back(c); 
 }
 
+/*void Store::verify_empty_basket(Costumer& c)
+{
+	for (Costumer& cs : costumer)
+	{
+		for (Product& ps : cs.get_product())
+		{ 
+			if(ps.get_quantity_available() < 1)
+
+		}
+	}
+}*/
+
 void Store::display_Customer()
 {
 	for (Costumer& cs : costumer)
@@ -89,6 +101,17 @@ void Store::add_product_basket(Costumer& c, Product& p)
 		if (cs.get_id() == c.get_id())
 		{
 			cs.add_product(p);
+		}
+	}
+}
+
+void Store::erease_product_basket(Costumer& c, Product& p)
+{
+	for (Costumer& cs : costumer)
+	{
+		if (cs.get_id() == c.get_id())
+		{
+			cs.erease_product(p);
 		}
 	}
 }

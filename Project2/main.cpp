@@ -35,6 +35,9 @@ int main()
 	s.add_costumer(c1); 
 	s.add_costumer(c2);
 	s.add_costumer(c3);
+	s.add_product_basket(c1, PS5);
+	s.display_Customer_name("Noah");
+	s.erease_product_basket(c1, PS5);
 	s.display_Customer_name("Noah");
 
 
